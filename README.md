@@ -27,3 +27,22 @@ This README provides a comprehensive guide to setting up an EC2 instance on Amaz
 - Connect to the instance via SSH using the public IP address and the key pair (`meta-key.pem`):
   ```bash
   ssh -i "meta-key.pem" ec2-user@<public-ip-address>
+
+### 6. Retrieve Instance Metadata
+- Fetch the instance metadata and save it to a file named data.txt in the home directory:
+ ```bash
+curl http://169.254.169.254/latest/meta-data/ > ~/data.txt
+
+### 7. Create a Simple Web Page
+ ```bash
+sudo yum update -y
+sudo yum install -y httpd
+sudo systemctl enable httpd
+sudo service httpd start
+echo "<h1>Welcome to Amos Website from $HOSTNAME</h1>" | sudo tee /var/www/html/index.html
+sudo mkdir /var/www/html/app1
+echo "<!DOCTYPE html> <html> <body style=\"background-color:rgb(250, 210, 210);\"> <h1>Welcome to Amos Website from $HOSTNAME!</h1> <p>Ec2 Demo</p> <p>Application Version: V1</p> </body></html>" | sudo tee /var/www/html/app1/index.html
+
+
+
+
