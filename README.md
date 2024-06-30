@@ -1,4 +1,4 @@
-# EC2 Instance Setup Guide
+# EC2 Instance Setup  
 
 This README provides a comprehensive guide to setting up an EC2 instance on Amazon Web Services (AWS), configuring it, and performing additional tasks such as retrieving instance metadata and setting up a basic web server.
 
