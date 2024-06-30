@@ -34,6 +34,7 @@ This README provides a comprehensive guide to setting up an EC2 instance on Amaz
 curl http://169.254.169.254/latest/meta-data/ > ~/data.txt
 
 ### 7. Create a Simple Web Page
+- Create an HTML file (index.html) in the document root (/var/www/html/) to display a basic webpage:
  ```bash
 sudo yum update -y
 sudo yum install -y httpd
