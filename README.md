@@ -32,7 +32,7 @@ This README provides a comprehensive guide to setting up an EC2 instance on Amaz
 - Fetch the instance metadata and save it to a file named data.txt in the home directory:
  ```bash
 curl http://169.254.169.254/latest/meta-data/ > ~/data.txt
-
+```
 ### 7. Create a Simple Web Page
 - Create an HTML file (index.html) in the document root (/var/www/html/) to display a basic webpage:
  ```bash
@@ -43,7 +43,7 @@ sudo service httpd start
 echo "<h1>Welcome to Amos Website from $HOSTNAME</h1>" | sudo tee /var/www/html/index.html
 sudo mkdir /var/www/html/app1
 echo "<!DOCTYPE html> <html> <body style=\"background-color:rgb(250, 210, 210);\"> <h1>Welcome to Amos Website from $HOSTNAME!</h1> <p>Ec2 Demo</p> <p>Application Version: V1</p> </body></html>" | sudo tee /var/www/html/app1/index.html
-
+```
 
 
 
